@@ -1,0 +1,24 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterDeployment
+metadata:
+  name: sno
+  namespace: sno
+  labels:
+    cluster.open-cluster-management.io/clusterset: default
+    hive.openshift.io/cluster-platform: agent-baremetal
+spec:
+  baseDomain: redhat.hpecic.net
+  clusterInstallRef:
+    group: extensions.hive.openshift.io
+    kind: AgentClusterInstall
+    name: sno
+    version: v1beta1
+  clusterName: sno
+  controlPlaneConfig:
+    servingCertificates: {}
+  installed: false
+  platform:
+    agentBareMetal:
+      agentSelector: {}
+  pullSecretRef:
+    name: pullsecret-cluster-sno
