@@ -21,4 +21,4 @@ spec:
     agentBareMetal:
       agentSelector: {}
   pullSecretRef:
-    name: {{ .Values.cluster.name }}-merged-pull-secret
+    name: pullsecret-cluster-sno
