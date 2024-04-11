@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sno-1-creation
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: sno-1
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    helm:
+      parameters:
+        - name: cluster.name
+          value: sno-1
+    path: chart
+    repoURL: 'https://github.com/fdavalo/sno-custom-mce-agent-provisioning.git'
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true      

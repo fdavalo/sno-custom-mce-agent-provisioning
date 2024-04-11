@@ -7,8 +7,6 @@ spec:
   clusterDeploymentRef:
     name: {{ .Values.cluster.name }}
   holdInstallation: true
-  imageSetRef:
-    name: img4.13.39-multi-appsub
   networking:
     clusterNetwork:
       - cidr: 10.128.0.0/14
@@ -20,5 +18,7 @@ spec:
     userManagedNetworking: true
   provisionRequirements:
     controlPlaneAgents: 1
-  sshPublicKey: >-
-    {{ .Values.cluster.sshpublickey }}
+  imageSetRef:
+    #quay.io/openshift-release-dev/ocp-release:4.12.30-multi
+    name: img{{ .Values.cluster.version }}-multi-appsub   
+

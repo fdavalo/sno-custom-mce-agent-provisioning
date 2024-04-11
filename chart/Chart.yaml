@@ -1,0 +1,4 @@
+apiVersion: v1
+description: 'Sno As A Service'
+name: sno-provisioning
+version: 0.1.0
