@@ -19,4 +19,4 @@ spec:
   taints:
     - effect: NoSelect
       key: cluster.open-cluster-management.io/unreachable
-      timeAdded: '2024-04-11T06:57:53Z'
+
