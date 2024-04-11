@@ -1,11 +1,11 @@
 apiVersion: extensions.hive.openshift.io/v1beta1
 kind: AgentClusterInstall
 metadata:
-  name: sno
+  name: sno-@name@
   namespace: sno-@name@
 spec:
   clusterDeploymentRef:
-    name: sno
+    name: sno-@name@
   holdInstallation: true
   imageSetRef:
     name: img4.13.39-multi-appsub
