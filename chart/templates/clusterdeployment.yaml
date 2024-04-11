@@ -20,3 +20,5 @@ spec:
   platform:
     agentBareMetal:
       agentSelector: {}
+  pullSecretRef:
+    name: pullsecret-cluster-sno

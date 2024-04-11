@@ -22,3 +22,4 @@ spec:
     #quay.io/openshift-release-dev/ocp-release:4.12.30-multi
     name: img{{ .Values.cluster.version }}-multi-appsub   
 
+
