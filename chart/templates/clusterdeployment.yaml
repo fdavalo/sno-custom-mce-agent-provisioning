@@ -1,8 +1,8 @@
 apiVersion: hive.openshift.io/v1
 kind: ClusterDeployment
 metadata:
-  name: sno-@name@
-  namespace: sno-@name@
+  name: {{ .Values.cluster.name }}
+  namespace: {{ .Values.cluster.name }}
   labels:
     cluster.open-cluster-management.io/clusterset: default
     hive.openshift.io/cluster-platform: agent-baremetal
@@ -11,9 +11,9 @@ spec:
   clusterInstallRef:
     group: extensions.hive.openshift.io
     kind: AgentClusterInstall
-    name: sno-@name@
+    name: {{ .Values.cluster.name }}
     version: v1beta1
-  clusterName: sno-@name@
+  clusterName: {{ .Values.cluster.name }}
   controlPlaneConfig:
     servingCertificates: {}
   installed: false
@@ -21,4 +21,4 @@ spec:
     agentBareMetal:
       agentSelector: {}
   pullSecretRef:
-    name: pullsecret-cluster-sno
+    name: pullsecret-cluster
