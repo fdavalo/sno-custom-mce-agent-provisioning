@@ -2,7 +2,7 @@ apiVersion: hive.openshift.io/v1
 kind: ClusterDeployment
 metadata:
   name: {{ .Values.cluster.name }}
-  namespace: {{ .Values.cluster.name }}
+  namespace: {{ .Values.cluster.namespace }}
   labels:
     cluster.open-cluster-management.io/clusterset: default
     hive.openshift.io/cluster-platform: agent-baremetal      
