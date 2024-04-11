@@ -11,7 +11,7 @@ spec:
   clusterInstallRef:
     group: extensions.hive.openshift.io
     kind: AgentClusterInstall
-    name: sno
+    name: sno-template
     version: v1beta1
   clusterName: sno
   controlPlaneConfig:
