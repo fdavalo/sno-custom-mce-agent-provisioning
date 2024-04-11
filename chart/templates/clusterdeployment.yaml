@@ -19,6 +19,8 @@ spec:
   installed: false
   platform:
     agentBareMetal:
-      agentSelector: {}
+      agentSelector: 
+        matchLabels:
+          infraenvs.agent-install.openshift.io: baremetal
   pullSecretRef:
     name: {{ .Values.cluster.name }}-template-merged-pull-secret
