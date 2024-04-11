@@ -1,7 +1,7 @@
 apiVersion: hive.openshift.io/v1
 kind: ClusterDeployment
 metadata:
-  name: sno
+  name: sno-@name@
   namespace: sno-@name@
   labels:
     cluster.open-cluster-management.io/clusterset: default
@@ -11,7 +11,7 @@ spec:
   clusterInstallRef:
     group: extensions.hive.openshift.io
     kind: AgentClusterInstall
-    name: sno
+    name: sno-@name@
     version: v1beta1
   clusterName: sno-@name@
   controlPlaneConfig:
