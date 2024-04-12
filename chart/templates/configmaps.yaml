@@ -22,7 +22,7 @@ data:
               partitions:
                 - label: var
                   number: 5
-                  sizeMiB: 25217
+                  sizeMiB: 75217
                   startMiB: 25217
                 - label: lvmstorage
                   number: 6
